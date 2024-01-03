@@ -1,13 +1,34 @@
 <script>
-    import { rustComponents } from '$lib/items/itemData.js'
-	import ItemSelector from '../lib/components/ItemSelector.svelte';
-	import Inventory from '../lib/components/inventory/Inventory.svelte';
+    import { components } from '$data/components.js'
+	import AmountSelector from '../lib/components/AmountSelector.svelte';
+	import ComponentButton from '../lib/components/ComponentButton.svelte';
+	import Inventory from '../lib/components/Inventory.svelte';
+    
+    let selectedComponent;
+    let inventory = [];
+    const handleSelection = (component) => {
+        if (selectedComponent === component) {
+            selectedComponent = null;
+        } else {
+            selectedComponent = component
+        }
 
-    console.log(Object.entries(rustComponents))
+        console.log(selectedComponent)
+    }
 
-    let inventory = [{gears: 4, metalBlades: 1}]
-
+    const addToInventory = (selectedComponent, amount) => {
+        inventory.push({...selectedComponent, amount})
+        inventory = [...inventory]
+        console.log(inventory)
+    }
 </script>
 
-<ItemSelector rustComponents={rustComponents} />
+<div class="flex gap-4 items-center justify-center">
+    {#each components as component}
+        <ComponentButton {component} {handleSelection} />
+    {/each}
+</div>
+{#if selectedComponent != null}
+    <AmountSelector {selectedComponent} {addToInventory} />
+{/if}
 <Inventory {inventory} />
