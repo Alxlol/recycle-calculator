@@ -41,13 +41,15 @@
 </div>
 
 
-{#if inventory.length > 0}
+
     <div class="flex flex-col items-center justify-center gap-14">
         <Inventory {inventory} {removeFromInventory} />
-        <p class="text-4xl">&#8595;</p>
+        {#if inventory.length > 0}
+            <p class="text-4xl">&#8595;</p>
+        {/if}
         <YieldDisplay {inventory} />
     </div> 
-{/if}
+
 
 
 
