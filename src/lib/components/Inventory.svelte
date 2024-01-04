@@ -1,9 +1,14 @@
 <script>
+	import InventoryButton from "./InventoryButton.svelte";
+
     export let inventory;
+    export let removeFromInventory;
 </script>
 
-<div class="flex gap-4 items-center justify-center">
-    {#each inventory as item }
-        <img class="w-20 h-20 border-2" src={item.icon} alt="">
-    {/each}
+<div class="text-center">
+    <div class="flex flex-wrap px-40 gap-4 items-center justify-center">
+        {#each inventory as item }
+            <InventoryButton {item} {removeFromInventory} />
+        {/each}
+    </div>
 </div>

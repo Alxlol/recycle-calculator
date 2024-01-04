@@ -3,32 +3,49 @@
 	import AmountSelector from '../lib/components/AmountSelector.svelte';
 	import ComponentButton from '../lib/components/ComponentButton.svelte';
 	import Inventory from '../lib/components/Inventory.svelte';
+	import YieldDisplay from '../lib/components/YieldDisplay.svelte';
     
-    let selectedComponent;
+    let selectedComponent = components[0];
     let inventory = [];
+
+    const removeFromInventory = (item) => {
+        inventory = inventory.filter(i => i !== item)
+    }
+
     const handleSelection = (component) => {
         if (selectedComponent === component) {
-            selectedComponent = null;
+            
         } else {
             selectedComponent = component
         }
 
-        console.log(selectedComponent)
     }
 
     const addToInventory = (selectedComponent, amount) => {
         inventory.push({...selectedComponent, amount})
         inventory = [...inventory]
-        console.log(inventory)
     }
 </script>
 
-<div class="flex gap-4 items-center justify-center">
-    {#each components as component}
-        <ComponentButton {component} {handleSelection} />
-    {/each}
+
+<div class="flex items-center justify-center gap-20">
+    
+        <div class="grid grid-cols-7 gap-8">
+            {#each components as component}
+                <ComponentButton {component} {handleSelection} />
+            {/each}
+        </div>
+    
+    
+    {#if selectedComponent != null}
+        <AmountSelector {selectedComponent} {addToInventory} />
+    {/if}
 </div>
-{#if selectedComponent != null}
-    <AmountSelector {selectedComponent} {addToInventory} />
-{/if}
-<Inventory {inventory} />
+
+<div class="flex flex-col items-center justify-center gap-14">
+    <Inventory {inventory} {removeFromInventory} />
+    <YieldDisplay {inventory} />
+</div> 
+
+
+

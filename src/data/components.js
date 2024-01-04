@@ -1,5 +1,102 @@
 export const components = [
 	{
+		name: 'emptyPropaneTank',
+		yield: {
+			mfrags: 50,
+			scrap: 1
+		},
+		icon: 'itemIcons/propanetank.png'
+	},
+	{
+		name: 'gears',
+		yield: {
+			scrap: 10,
+			mfrags: 13
+		},
+		icon: 'itemIcons/gears.png'
+	},
+	{
+		name: 'metalBlade',
+		yield: {
+			scrap: 2,
+			mfrags: 15
+		},
+		icon: 'itemIcons/metalblade.png'
+	},
+	{
+		name: 'metalPipe',
+		yield: {
+			scrap: 5,
+			hqual: 1
+		},
+		icon: 'itemIcons/metalpipe.png'
+	},
+	{
+		name: 'metalSpring',
+		yield: {
+			scrap: 10,
+			hqual: 1
+		},
+		icon: 'itemIcons/metalspring.png'
+	},
+	{
+		name: 'rifleBody',
+		yield: {
+			scrap: 25,
+			hqual: 2
+		},
+		icon: 'itemIcons/riflebody.png'
+	},
+	{
+		name: 'roadSigns',
+		yield: {
+			scrap: 5,
+			hqual: 1
+		},
+		icon: 'itemIcons/roadsigns.png'
+	},
+	{
+		name: 'rope',
+		yield: {
+			cloth: 15
+		},
+		icon: 'itemIcons/rope.png'
+	},
+	{
+		name: 'smgBody',
+		yield: {
+			scrap: 15,
+			hqual: 2
+		},
+		icon: 'itemIcons/smgbody.png'
+	},
+	{
+		name: 'semiBody',
+		yield: {
+			scrap: 15,
+			hqual: 2,
+			mfrags: 75
+		},
+		icon: 'itemIcons/semibody.png'
+	},
+	{
+		name: 'sewingKit',
+		yield: {
+			rope: 2,
+			cloth: 10
+		},
+		icon: 'itemIcons/sewingkit.png'
+	},
+	{
+		name: 'sheetMetal',
+		yield: {
+			hqual: 1,
+			scrap: 8,
+			mfrags: 100
+		},
+		icon: 'itemIcons/sheetmetal.png'
+	},
+	{
 		name: 'tarp',
 		yield: {
 			cloth: 50
@@ -13,129 +110,5 @@ export const components = [
 			scrap: 20
 		},
 		icon: 'itemIcons/techparts.png'
-	},
-	{
-		name: 'emptyPropaneTank',
-		yield: {
-			mfrags: 50,
-			scrap: 1
-		},
-		icon: 'itemIcons/propanetank.png'
-	},
-	{
-		name: 'sheetMetal',
-		yield: {
-			hqual: 1,
-			scrap: 8,
-			mfrags: 100
-		},
-		icon: 'itemIcons/sheetmetal.png'
 	}
 ];
-
-// export const rustComponents = {
-// 	gears: {
-// 		yield: {
-// 			mfrags: 13,
-// 			scrap: 10
-// 		},
-// 		icon: 'itemIcons/gears.png'
-// 	},
-// 	metalBlades: {
-// 		yield: {
-// 			mfrags: 15,
-// 			scrap: 2
-// 		},
-// 		icon: 'itemIcons/metalblade.png'
-// 	},
-// 	metalPipe: {
-// 		yield: {
-// 			hqual: 1,
-// 			scrap: 5
-// 		},
-// 		icon: 'itemIcons/metalpipe.png'
-// 	},
-// 	metalSpring: {
-// 		yield: {
-// 			hqual: 1,
-// 			scrap: 10
-// 		},
-// 		icon: 'itemIcons/metalspring.png'
-// 	},
-// 	rope: {
-// 		yield: {
-// 			cloth: 15
-// 		},
-// 		icon: 'itemIcons/rope.png'
-// 	},
-// 	sewingKit: {
-// 		yield: {
-// 			cloth: 10,
-// 			rope: 2
-// 		},
-// 		icon: 'itemIcons/sewingkit.png'
-// 	},
-// 	roadSigns: {
-// 		yield: {
-// 			hqual: 1,
-// 			scrap: 5
-// 		},
-// 		icon: 'itemIcons/roadsigns.png'
-// 	},
-// 	rifleBody: {
-// 		yield: {
-// 			hqual: 2,
-// 			scrap: 25
-// 		},
-// 		icon: 'itemIcons/riflebody.png'
-// 	},
-// 	smgBody: {
-// 		yield: {
-// 			hqual: 2,
-// 			scrap: 15
-// 		},
-// 		icon: 'itemIcons/smgbody.png'
-// 	},
-// 	semiBody: {
-// 		yield: {
-// 			hqual: 2,
-// 			scrap: 15,
-// 			mfrags: 25
-// 		},
-// 		icon: 'itemIcons/semibody.png'
-// 	},
-// 	tarp: {
-// 		yield: {
-// 			cloth: 50
-// 		},
-// 		icon: 'itemIcons/tarp.png'
-// 	},
-// 	techTrash: {
-// 		yield: {
-// 			hqual: 1,
-// 			scrap: 20
-// 		},
-// 		icon: 'itemIcons/techparts.png'
-// 	},
-// 	emptyPropaneTank: {
-// 		yield: {
-// 			mfrags: 50,
-// 			scrap: 1
-// 		},
-// 		icon: 'itemIcons/propanetank.png'
-// 	},
-// 	sheetMetal: {
-// 		yield: {
-// 			hqual: 1,
-// 			scrap: 8,
-// 			mfrags: 100
-// 		},
-// 		icon: 'itemIcons/sheetmetal.png'
-// 	},
-// 	electricFuse: {
-// 		yield: {
-// 			scrap: 20
-// 		},
-// 		icon: 'itemIcons/fuse.png'
-// 	}
-// };
