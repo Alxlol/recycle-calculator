@@ -35,6 +35,12 @@
 
 </script>
 
+<svelte:head>
+    {#each sum as item}
+      <link rel="preload" as="image" href={item.icon} />
+    {/each}
+</svelte:head>
+
 <div class="flex flex-col items-center justify-center">
     <div class="flex gap-4 mt-4">
         {#each sum as item}
