@@ -15,3 +15,8 @@ export let resetResources = () => {
 		{ name: 'rope', amount: 0, icon: 'itemIcons/rope.png' }
 	];
 };
+
+export let updateResources = (resource, amount) => {
+	let index = resources.findIndex((res) => res.name === resource);
+	resources[index].amount += amount;
+};
