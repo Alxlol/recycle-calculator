@@ -110,5 +110,12 @@ export const components = [
 			scrap: 20
 		},
 		icon: 'itemIcons/techparts.png'
+	},
+	{
+		name: 'electricFuse',
+		yield: {
+			scrap: 20
+		},
+		icon: 'itemIcons/fuse.png'
 	}
 ];
