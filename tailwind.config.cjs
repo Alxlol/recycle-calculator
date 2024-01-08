@@ -5,7 +5,7 @@ const config = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				'hero-pattern': "url('rust-background.jpg')"
+				'hero-pattern': "url('/rust-background.jpg')"
 			}
 		}
 	},
