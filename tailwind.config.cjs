@@ -3,7 +3,11 @@ const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		extend: {
+			backgroundImage: {
+				'hero-pattern': "url('rust-background.jpg')"
+			}
+		}
 	},
 
 	plugins: []

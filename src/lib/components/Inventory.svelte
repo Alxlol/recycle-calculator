@@ -5,8 +5,8 @@
     export let removeFromInventory;
 </script>
 
-<div class="text-center">
-    <div class="flex flex-wrap px-40 gap-4 items-center justify-center">
+<div class="text-center mb-2">
+    <div class="flex flex-wrap max-w-[57rem] gap-4 items-center justify-center">
         {#each inventory as item }
             <InventoryButton {item} {removeFromInventory} />
         {/each}
