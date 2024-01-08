@@ -18,7 +18,7 @@
     <div class="slidecontainer ">
         <input bind:value={amount} type="range" min="1" max="100" class="slider" id="myRange">
     </div>
-    <button on:click={handleClick} class="bg-neutral-500 px-4 py-2 rounded-xl mt-4 text-white hover:bg-neutral-300 w-full">Add</button>
+    <button on:click={handleClick} class="bg-slate-600 font-bold px-4 py-2 rounded-xl mt-4 text-white hover:bg-orange-400 w-full">Add</button>
 </div>
     
 <style>
@@ -26,16 +26,19 @@
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
-        background: transparent;
         border: 0;
         outline: 0;
+
+        background: rgb(58, 79, 114);
     }
 
     input[type=number] {
         -moz-appearance: textfield;
-        background: transparent;
+        background: rgb(58, 79, 114);
         border: 0;
         outline: 0;
+        border-radius: .5rem;
+        padding-block: .3rem;
     }
 
 
